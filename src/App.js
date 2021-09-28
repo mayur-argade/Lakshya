@@ -1,11 +1,12 @@
 import './App.css';
+import Landingpage from './pages/landing-page/landingpage';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Lakshya</h1>
-      <h2>Your online learning friend</h2>
-    </div>
+
+    <Landingpage />
+
   );
 }
 
