@@ -4,7 +4,7 @@
 
 ### Online Learning Portal
 
-![Lakshya][.\myfolder\Lakshya.jpg]
+![Lakshya](https://github.com/mayur-argade/Lakshya/blob/readme/myfolder/Lakshya.jpg)
 
 
 
