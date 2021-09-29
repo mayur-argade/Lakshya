@@ -69,3 +69,7 @@ to start the development server
 npm start
 ```
 
+### development guide
+
+New progress is merge to Development branch first and then main branch
+
