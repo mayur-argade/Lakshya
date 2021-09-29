@@ -4,7 +4,7 @@
 
 ### Online Learning Portal
 
-![Lakshya][Lakshya.jpg]
+![Lakshya][../master/myFolder/Lakshya.jpg]
 
 
 
