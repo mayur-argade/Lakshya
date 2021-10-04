@@ -9,4 +9,4 @@ const landingpage = () => {
     )
 }
 
-export default landingpage
+export default landingpage;
