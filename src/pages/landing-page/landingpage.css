@@ -1,0 +1,175 @@
+*{
+    margin: 0%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+}
+
+/* -----------------Header---------------- */
+.main-nav{
+    padding-top: 2rem;
+}
+.header{
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    
+}
+.heroimg{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+.heading{
+    font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 49px;
+}
+.tagline{
+padding-top: 1rem;
+padding-bottom: 1rem;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 28px;
+
+color: #000000;
+}
+/* ------------------------------------------------ */
+
+/* ----------------------header2------------------ */
+.containerhero2{
+background-image: url(../images/hero2bkg.svg);
+background-repeat: no-repeat;
+background-position-x: right;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+.learndo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;    
+}
+.title{
+    font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 49px;
+}
+.explain{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+}
+/* ---------------------------------------------------- */
+
+/* ----------------Features--------------------------- */
+.featuredis{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 28px;
+text-align: center;
+}
+.featurecontainer{
+    padding-bottom: 5rem;
+}
+/* ---------------------------------------------------- */
+
+/* -----------------Teams----------------------------- */
+.teammates{
+    background-color: #E6E6FD;
+}
+.ourTeam{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    padding-top: 3rem;
+    padding-bottom: 2rem;  
+}
+.teamcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+.team{
+    padding: 2rem;
+    text-align: center;
+}
+.name{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+}
+
+/* ---------------------------------------------------- */
+
+/* ----------------About page css-------------------- */
+.aboutcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/aboutimg.svg);
+    height: 522px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.aboutus{
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 2.25rem;
+line-height: 3.063rem;
+text-align: center;
+}
+.para{
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 2.25rem;
+line-height: 3.063rem;
+text-align: center;
+color: #000000;
+padding-right: 5%;
+padding-left: 5%;
+}
