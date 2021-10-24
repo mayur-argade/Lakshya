@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import './personal.css';
-import { Container, CssBaseline, Typography, Grid, Button, TextField } from '@mui/material';
+import { Container, CssBaseline, Typography, Grid, Button, TextField} from '@mui/material';
 import svg1 from '../../images/svg_art.svg';
 import placeholder from '../../images/profilePlaceholder.png';
 
