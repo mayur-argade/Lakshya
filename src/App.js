@@ -1,6 +1,15 @@
 // import './App.css';
-import Landingpage from './pages/landing-page/Landingpage';
+import Landingpage from './pages/landingPage/Landingpage'
+import PersonalInfo from './pages/personal-info-page/personal'
+import Login from './pages/login-page/login'
+
 import {createTheme, ThemeProvider} from '@material-ui/core'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
 const theme = createTheme ({
 palette: {
@@ -16,11 +25,27 @@ palette: {
 
 function App() {
   return (
+    <>
     <ThemeProvider theme={theme}>
-    
-    <Landingpage />
+    <Router>
+      <Switch>
 
+      <Route exact path="/">
+      <Landingpage />  
+      </Route>
+
+        <Route path="/login">
+        <Login />
+        </Route>
+        
+        <Route path="/register">
+          <PersonalInfo />
+        </Route>
+
+      </Switch>
+    </Router>
     </ThemeProvider>
+    </>
   );
 }
 

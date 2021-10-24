@@ -1,9 +1,9 @@
-import Header from '../landing-page/components/header'
-import Header2 from '../landing-page/components/header2'
-import Features from '../landing-page/components/Features'
-import Team from '../landing-page/components/Team'
-import About from '../landing-page/components/About'
-import Footer from '../landing-page/components/Footer'
+import Header from './components/header'
+import Header2 from './components/header2'
+import Features from './components/Features'
+import Team from './components/Team'
+import About from './components/About'
+import Footer from './components/Footer'
 
 
 import './landingpage.css'
