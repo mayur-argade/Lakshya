@@ -26,6 +26,7 @@ const Team = () => {
               
               
               <div className="team">
+                
               <CardActionArea>
                 <div className="mayurimg">
                 <img src={ mayur } alt="mayur" className="mayur"/>
@@ -34,6 +35,7 @@ const Team = () => {
                     Mayur Argade
                 </div>
                 </CardActionArea>
+                
               </div>
 
               <div className="team">

@@ -64,7 +64,18 @@ to install node package modules
 npm install
 ```
 
-to start the development server 
+Installing Material-UI dependencies
+```
+npm install @mui/material @emotion/react @emotion/styled
+npm install @material-ui/core
+```
+
+Installing React-router-dom
+```
+npm add react-router-dom
+```
+
+start the your development server 
 ```
 npm start
 ```

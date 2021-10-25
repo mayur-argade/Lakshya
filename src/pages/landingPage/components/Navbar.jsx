@@ -1,4 +1,7 @@
-import { AppBar, Button, Grid, Toolbar, Typography } from '@material-ui/core'
+import { Button, Grid,} from '@material-ui/core'
+import { Link } from 'react-router-dom'
+
+
 const Navbar = () => {
     return (
         <>
@@ -16,7 +19,9 @@ const Navbar = () => {
 
 
                 <Grid item xs={1} md={1} lg={1}>
+                    <Link to='/login' style={{textDecoration:"none"}} >    
                     <Button variant="contained" color="primary" className="signin">Sign in</Button>
+                    </Link>
                 </Grid>
 
 

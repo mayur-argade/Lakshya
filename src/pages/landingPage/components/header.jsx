@@ -1,7 +1,7 @@
 import {Grid, Button } from '@material-ui/core'
 import Navbar from './Navbar'
 import mainImg from '../../images/Heroimg.svg'
-
+import { Link } from 'react-router-dom'
 
 const header = () => {
     return (
@@ -33,7 +33,9 @@ const header = () => {
         
         </div>
         <div className="getStarted">
+            <Link to='/login' style={{textDecoration:"none"}} >
             <Button variant="contained" color="secondary">Get started</Button>
+            </Link>
         </div>
         </div>
              </Grid>
