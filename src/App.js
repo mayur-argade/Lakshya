@@ -1,6 +1,6 @@
 import Landingpage from './pages/landingPage/Landingpage'
 import PersonalInfo from './pages/personal-info-page/personal'
-import Login from './pages/login-page/login'
+import Login from './pages/Login Page/login'
 // import '@fontsource/roboto/300.css';
 // import '@fontsource/roboto/400.css';
 // import '@fontsource/roboto/500.css';
