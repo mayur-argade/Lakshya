@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignIn() {
+export default function SignUp() {
   const classes = useStyles();
 
   return (
@@ -46,8 +46,8 @@ export default function SignIn() {
     <Grid container direction="column" justifyContent="center" alignItems="center"> 
 
     <Typography align='center' variant='h2' style={{color:'#A405DC',fontWeight:'600',marginTop:100}}>Lakshya</Typography>
-            <Typography variant='h4' fontWeight='400' align='center'>Welcome :)</Typography>
-            <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Login In</Typography>
+            <Typography variant='h4' fontWeight='400' align='center'>Hello :)</Typography>
+            <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Sign Up</Typography> 
 
     <Grid container justifyContent="center" alignItems="center">
 
@@ -62,7 +62,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Sign Up
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -91,6 +91,7 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+         <Link to='/personalinfo'>
           <Button
             type="submit"
             fullWidth
@@ -98,8 +99,9 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            Sign Up
           </Button>
+          </Link>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
@@ -107,8 +109,8 @@ export default function SignIn() {
               </Link>
             </Grid>
             <Grid item>
-              <Link to='/register'>
-                {"Don't have an account? Sign Up"}
+              <Link to='/Login'>
+                {"Already have an account? Sign In"}
               </Link>
             </Grid>
           </Grid>
