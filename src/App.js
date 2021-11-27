@@ -1,9 +1,10 @@
-import Landingpage from "./pages/landingPage/Landingpage";
-import PersonalInfo from "./pages/personal-info-page/personal";
-import Login from "./pages/Login Page/login";
-import Course from "./pages/coursePage/Course";
-import Explore from "./pages/Explore/Explore";
-import Profile from "./pages/profile/Profile"
+import Landingpage from './pages/landingPage/Landingpage'
+import PersonalInfo from './pages/personal-info-page/personal'
+import Login from './pages/Login Page/login'
+import SignUp from './pages/SignUp/SignUp';
+import Explore from './pages/Explore/Explore';
+import Profile from './pages/profile/Profile'
+import Course from './pages/coursePage/Course'
 // import '@fontsource/roboto/300.css';
 // import '@fontsource/roboto/400.css';
 // import '@fontsource/roboto/500.css';
@@ -33,38 +34,41 @@ const theme = createTheme({
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Router>
-          <Switch>
+    <ThemeProvider theme={theme}>
+    <Router>
+      <Switch>
 
-            <Route exact path="/">
-              <Landingpage />
-            </Route>
+      <Route exact path="/">
+      <Landingpage />  
+      </Route>
 
-            <Route path="/login">
-              <Login />
-            </Route>
+        <Route path="/login">
+        <Login />
+        </Route>
+        
+        <Route path="/register">
+          <SignUp />
+        </Route>
 
-            <Route path="/register">
-              <PersonalInfo />
-            </Route>
+        <Route path="/personalinfo">
+          <PersonalInfo />
+        </Route>
 
-            <Route path="/explore">
-              <Explore />
-            </Route>
+        <Route path="/explore">
+          <Explore />
+        </Route>
 
-            <Route exact path="/profile">
-              <Profile/>
-            </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
 
-            <Route path="/:coursename">
-              <Course/>
-            </Route>
-            
+        <Route path="/:coursename">
+          <Course />
+        </Route>
 
-          </Switch>
-        </Router>
-      </ThemeProvider>
+      </Switch>
+    </Router>
+    </ThemeProvider>
     </>
   );
 }
