@@ -7,7 +7,6 @@ const header = () => {
     return (
     <>
     <Grid container 
-    container
     direction="column"
     className="header">
         
@@ -22,7 +21,7 @@ const header = () => {
          alignItems="center">
 
              <div item className="heroimg">
-             <img src={ mainImg } alt="Image"  />
+             <img src={ mainImg } alt="mainimg"  />
              </div>
 
              <Grid item>

@@ -21,7 +21,7 @@ const header2 = () => {
             </Grid>
 
              <Grid item >
-             <img src={ secimg } alt="Image" className="header2img" />
+             <img src={ secimg } alt="header2" className="header2img" />
              </Grid>
 
         </Grid>

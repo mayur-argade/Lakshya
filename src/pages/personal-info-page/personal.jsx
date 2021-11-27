@@ -3,6 +3,7 @@ import './personal.css';
 import { Container, CssBaseline, Typography, Grid, Button, TextField} from '@mui/material';
 import svg1 from '../../images/Hi.gif';
 import placeholder from '../../images/profilePlaceholder.png';
+import { Link } from 'react-router-dom';
 
 const PersonalInfoPage = () => {
     const [page, setPage]=useState(1);
@@ -89,7 +90,9 @@ const PersonalInfoPage = () => {
 
 
                                 <Grid item xs={12} md={12} xl={12} align='center'>
+                                    
                                     <Button variant='contained' size='large' onClick={nextPage} style={{marginBottom:10, borderRadius: '0.7em',color:'#FFFFFF',backgroundColor:'#A405DC'}}>Next</Button>
+                                    
                                 </Grid>
                             </Grid>
                         </Container>
@@ -160,7 +163,9 @@ const PersonalInfoPage = () => {
 
 
                     <Grid item xs={6} md={6} xl={6} align='left' style={{paddingLeft:60}}>
+                    <Link to="/explore">
                         <Button variant='contained' size='large' style={{marginBottom:10, borderRadius: '0.7em',color:'#FFFFFF',backgroundColor:'#A405DC'}}>Submit</Button>
+                    </Link>
                     </Grid>
                 </Grid>
             </>
