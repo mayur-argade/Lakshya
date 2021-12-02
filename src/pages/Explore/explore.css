@@ -1,0 +1,8 @@
+.feed{
+    display: flex;
+    justify-content: space-evenly;
+}
+.exploremain{
+    margin-top: 10px;
+    margin-right: 50px;  
+}

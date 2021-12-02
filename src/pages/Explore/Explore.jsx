@@ -1,22 +1,33 @@
+import ExploreFeed from '../components/ExploreFeed'
+import Sidebar from '../components/Sidebar'
+import Appbar from '../components/Appbar'
 import {Grid} from '@mui/material'
-import {Link} from 'react-router-dom'
+import './explore.css'
 
 const Explore = () => {
     return (
-        <div>
-<Grid direction="column" container justifyContent="center" alignItems="center">
+        <>
+    <Grid direction="column" container justifyContent="center" >
+    <Grid item>
+        <Appbar /> 
+    </Grid>
 
-
-            <Link to="/webd">
-            <h1>web development</h1>
-            </Link>
-            
-            <Link to="/github">
-            <h1>github</h1>
-            </Link>
-
-</Grid>
-        </div>
+    <Grid container direction="row" justifyContent="center"  style={{marginTop: 60}}>
+    
+        <Grid item xs={2}>
+            <Sidebar/>
+        </Grid>
+    
+        <Grid item xs={10}>
+            <ExploreFeed/>
+        </Grid>
+    
+    </Grid>
+    {/* <Grid item>
+      <Team/>
+    </Grid> */}
+    </Grid>
+        </>
     )
 }
 
