@@ -62,9 +62,7 @@ function App() {
           <Profile />
         </Route>
 
-        <Route path="/:coursename">
-          <Course />
-        </Route>
+        <Route path="/:coursename" component={Course}/> 
 
       </Switch>
     </Router>
