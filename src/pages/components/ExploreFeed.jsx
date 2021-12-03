@@ -15,15 +15,7 @@ const ExploreFeed = () => {
   return (
     <>
       <Grid container direction="column" alignItems="center">
-        <Grid item>
-          <img
-            src={exploremain}
-            alt="exploremain"
-            className="exploremain"
-            style={{ width: 1200, height: 300, padding: 5 }}
-          />
-        </Grid>
-
+        
         <Grid item>
           <Typography variant="h5" style={{ padding: 5}}>Explore Courses</Typography>
         </Grid>
