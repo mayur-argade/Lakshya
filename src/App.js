@@ -1,12 +1,73 @@
-import './App.css';
-import Landingpage from './pages/landing-page/landingpage';
+import Landingpage from './pages/landingPage/Landingpage'
+import PersonalInfo from './pages/personal-info-page/personal'
+import Login from './pages/Login Page/login'
+import SignUp from './pages/SignUp/SignUp';
+import Explore from './pages/Explore/Explore';
+import Profile from './pages/profile/Profile'
+import Course from './pages/coursePage/Course'
+// import '@fontsource/roboto/300.css';
+// import '@fontsource/roboto/400.css';
+// import '@fontsource/roboto/500.css';
+// import '@fontsource/roboto/700.css';
+import "./App.css";
 
+import { createTheme, ThemeProvider } from "@material-ui/core";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#9500DB",
+    },
+    secondary: {
+      main: "#FD5177",
+    },
+  },
+});
 
 function App() {
   return (
+    <>
+    <ThemeProvider theme={theme}>
+    <Router>
+      <Switch>
 
-    <Landingpage />
+      <Route exact path="/">
+      <Landingpage />  
+      </Route>
 
+        <Route path="/login">
+        <Login />
+        </Route>
+        
+        <Route path="/register">
+          <SignUp />
+        </Route>
+
+        <Route path="/personalinfo">
+          <PersonalInfo />
+        </Route>
+
+        <Route path="/explore">
+          <Explore />
+        </Route>
+
+        <Route path="/profile">
+          <Profile />
+        </Route>
+
+        <Route path="/:coursename" component={Course}/> 
+
+      </Switch>
+    </Router>
+    </ThemeProvider>
+    </>
   );
 }
 
