@@ -17,6 +17,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Error from './pages/Error/Error'
 
 
 
@@ -62,8 +63,13 @@ function App() {
           <Profile />
         </Route>
 
+        <Route path="/error">
+          <Error />
+        </Route>
+        
         <Route path="/:coursename" component={Course}/> 
 
+        
       </Switch>
     </Router>
     </ThemeProvider>

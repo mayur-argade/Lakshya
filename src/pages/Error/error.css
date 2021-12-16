@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.errorwrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errorTitle{
+   font-size: 50px;
+}
+.errorText{
+    font-size: 20px;
+}
+.error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
