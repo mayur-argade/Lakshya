@@ -1,8 +1,24 @@
 import {Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Grid, Box, Typography, Container } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import svg from '../../images/svjlogin.svg';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import React,{useState} from 'react';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB_WUrPgGWZA-DqMHP_k2m95Q8sOGhPQVc",
+  authDomain: "lakshya-9576f.firebaseapp.com",
+  projectId: "lakshya-9576f",
+  storageBucket: "lakshya-9576f.appspot.com",
+  messagingSenderId: "202043244759",
+  appId: "1:202043244759:web:2c67cd21e9dd7923077092",
+  measurementId: "G-NM1YQKJ1VN"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
 
 function Copyright() {
   return (
@@ -40,13 +56,39 @@ const useStyles = makeStyles(theme => ({
 export default function SignUp() {
   const classes = useStyles();
 
+  const [email,setEmail]=useState(null);
+  const [password,setPassword]=useState(null);
+
+  function getEmail(event){
+    setEmail(event.target.value);
+  }
+  
+  function getPassword(event){
+    setPassword(event.target.value);
+  }
+
+  function createUser(auth,email,password){
+    createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                  // Signed in 
+                  const user = userCredential.user;
+                  console.log("Signed Up");
+                  // ...
+                })
+                .catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                  // ..
+                })
+  }
+
   return (
     <>
 
     <Grid container direction="column" justifyContent="center" alignItems="center"> 
 
     <Typography align='center' variant='h2' style={{color:'#A405DC',fontWeight:'600',marginTop:100}}>Lakshya</Typography>
-            <Typography variant='h4' fontWeight='400' align='center'>Hello :)</Typography>
+            <Typography variant='h4' fontWeight='400' align='center'>Hello :</Typography>
             <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Sign Up</Typography> 
 
     <Grid container justifyContent="center" alignItems="center">
@@ -67,6 +109,7 @@ export default function SignUp() {
         <form className={classes.form} noValidate>
           <TextField
             variant="outlined"
+            onChange={getEmail}
             margin="normal"
             required
             fullWidth
@@ -78,6 +121,7 @@ export default function SignUp() {
           />
           <TextField
             variant="outlined"
+            onChange={getPassword}
             margin="normal"
             required
             fullWidth
@@ -98,13 +142,15 @@ export default function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={() =>
+              createUser(auth,email,password)}
           >
             Sign Up
           </Button>
           </Link>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link href="#" variant="body2" to='/error'>
                 Forgot password?
               </Link>
             </Grid>

@@ -2,9 +2,28 @@ import React,{useState,useEffect} from 'react';
 import './personal.css';
 import { Container, CssBaseline, Typography, Grid, Button, TextField} from '@mui/material';
 import svg1 from '../../images/Hi.gif';
+import { getAuth} from "firebase/auth";
 import placeholder from '../../images/profilePlaceholder.png';
 import { Link } from 'react-router-dom';
+import { initializeApp } from "firebase/app"
+import { getFirestore } from "firebase/firestore"
+import { doc, setDoc } from "firebase/firestore"; 
+import { getStorage,ref,uploadBytes } from "firebase/storage";
 
+
+const firebaseApp =initializeApp( {
+    apiKey: "AIzaSyB_WUrPgGWZA-DqMHP_k2m95Q8sOGhPQVc",
+    authDomain: "lakshya-9576f.firebaseapp.com",
+    projectId: "lakshya-9576f",
+    storageBucket: "lakshya-9576f.appspot.com",
+    messagingSenderId: "202043244759",
+    appId: "1:202043244759:web:2c67cd21e9dd7923077092",
+    measurementId: "G-NM1YQKJ1VN"
+  });
+
+const db = getFirestore();
+const auth = getAuth();
+const storage = getStorage();
 const PersonalInfoPage = () => {
     const [page, setPage]=useState(1);
     
@@ -14,7 +33,17 @@ const PersonalInfoPage = () => {
         const [college,setCollege]=useState(null);
         const [degree,setDegree]=useState(null);
         const [DOB,setDOB]=useState(null);
-    
+        
+        async function setUserData(){
+            const uid=auth.currentUser.uid;
+        await setDoc(doc(db, "users",uid.toString()),{
+            first_name:firstName.toString(),
+            last_name:lastName.toString(),
+            college:college.toString(),
+            degree:degree.toString(),
+            date_of_birth:DOB.toString(),
+        });
+    }
         function getFirstName(event){
             setFirstName(event.target.value);
     
@@ -44,6 +73,7 @@ const PersonalInfoPage = () => {
             console.log(DOB);
         }
         function nextPage(){
+            setUserData();
             setPage(page=>page+1);
             displayData();
         }
@@ -108,19 +138,29 @@ const PersonalInfoPage = () => {
             setPage(page=>page-1);
         }
         const [image, setImage]=useState(null);
+        const auth=getAuth();
+        const uid=auth.currentUser.uid;
+        const storageRef = ref(storage, 'user_profile_photos/'+uid);
         
         const [{alt, src}, setImg] = useState({
             src: placeholder,
             alt: 'Upload an Image'
         });
-    
+        var file;
         const handleImg = (e) => {
             if(e.target.files[0]) {
+                file=e.target.files[0];
                 setImg({
                     src: URL.createObjectURL(e.target.files[0]),
                     alt: e.target.files[0].name
-                });    
+                });
             }   
+        }
+
+        function uploadImage(file){
+            uploadBytes(storageRef, file).then((snapshot) => {
+                console.log('Uploaded a blob or file!');
+              });
         }
 
         useEffect(()=>{
@@ -128,6 +168,7 @@ const PersonalInfoPage = () => {
                 const reader =new FileReader();
                 reader.onloadend=()=>{
                     setImage(reader.result);
+                    uploadImage(reader.readAsDataURL(image));
                 }
                 reader.readAsDataURL(image);
             }
