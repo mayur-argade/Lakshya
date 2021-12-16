@@ -5,15 +5,24 @@ import { Link } from "react-router-dom"
 import logo from '../../images/logo.png'
 import { Message, Notifications, Settings } from '@material-ui/icons';
 import Search from './SearchFeature'
+import { getAuth, signOut } from "firebase/auth";
 
 const Appbar = () => {
     // const [auth, setAuth] = React.useState(true);
     const [anchorEl, setAnchorEl] = useState(null);
+    const auth = getAuth();
 
     // const handleChange = (event) => {
     //     setAuth(event.target.checked);
     //   };
-    
+      function SignOut(){
+        signOut(auth).then(() => {
+          // Sign-out successful.
+        }).catch((error) => {
+          // An error happened.
+        });
+        handleClose();
+      }
       const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
       };
@@ -74,7 +83,9 @@ const Appbar = () => {
                 </Link>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
                 <MenuItem onClick={handleClose}>Settings</MenuItem>
-                <MenuItem onClick={handleClose}>Sign Out</MenuItem>
+                <Link to="/">
+                <MenuItem onClick={SignOut}>Sign Out</MenuItem>
+                </Link>
               </Menu>
             </div>            
             </Toolbar>

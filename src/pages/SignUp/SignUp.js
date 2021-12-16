@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import svg from '../../images/svjlogin.svg';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_WUrPgGWZA-DqMHP_k2m95Q8sOGhPQVc",
@@ -67,13 +67,28 @@ export default function SignUp() {
     setPassword(event.target.value);
   }
 
+  function createUser(auth,email,password){
+    createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                  // Signed in 
+                  const user = userCredential.user;
+                  console.log("Signed Up");
+                  // ...
+                })
+                .catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                  // ..
+                })
+  }
+
   return (
     <>
 
     <Grid container direction="column" justifyContent="center" alignItems="center"> 
 
     <Typography align='center' variant='h2' style={{color:'#A405DC',fontWeight:'600',marginTop:100}}>Lakshya</Typography>
-            <Typography variant='h4' fontWeight='400' align='center'>Hello :)</Typography>
+            <Typography variant='h4' fontWeight='400' align='center'>Hello :</Typography>
             <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Sign Up</Typography> 
 
     <Grid container justifyContent="center" alignItems="center">
@@ -127,26 +142,15 @@ export default function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={
-              createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                  // Signed in 
-                  const user = userCredential.user;
-                  console.log("Signed Up");
-                  // ...
-                })
-                .catch((error) => {
-                  const errorCode = error.code;
-                  const errorMessage = error.message;
-                  // ..
-                })}
+            onClick={() =>
+              createUser(auth,email,password)}
           >
             Sign Up
           </Button>
           </Link>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link href="#" variant="body2" to='/error'>
                 Forgot password?
               </Link>
             </Grid>
