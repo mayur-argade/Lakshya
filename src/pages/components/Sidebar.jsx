@@ -1,7 +1,6 @@
-import { Home, PlayCircleFilled, Assignment, ContactMail, AcUnit } from "@material-ui/icons"
-import {Stack, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Typography , Button } from "@mui/material"
+import { Home, PlayCircleFilled, ContactMail } from "@material-ui/icons"
+import {Stack, List, ListItem, ListItemButton, ListItemText, ListItemIcon} from "@mui/material"
 import { Link } from "react-router-dom"
-import logo from '../../images/logo.png'
 import Card from './Card'
 
 
@@ -14,6 +13,7 @@ const Sidebar = () => {
             
             <div className="list" style={{marginTop:60}}>
             <List>
+            <Link to='/explore' style={{ textDecoration: "none", color:"black" }}>
             <ListItem >
             <ListItemButton>
               <ListItemIcon>
@@ -22,6 +22,7 @@ const Sidebar = () => {
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
+          </Link>
 
           <Link to='/error' style={{ textDecoration: "none", color:"black" }}>
           <ListItem >
@@ -34,6 +35,7 @@ const Sidebar = () => {
           </ListItem>
           </Link>
 
+          <Link to={{ pathname: "https://github.com/mayur-argade/Lakshya" }} target="_blank" style={{ textDecoration: "none", color:"black" }} >
           <ListItem >
             <ListItemButton>
               <ListItemIcon>
@@ -42,6 +44,8 @@ const Sidebar = () => {
               <ListItemText primary="Join" />
             </ListItemButton>
           </ListItem>
+          </Link>
+
           </List> 
             </div>
             

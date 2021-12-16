@@ -7,8 +7,10 @@ import {
   CardMedia,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import webd from "../../images/web.jpg";
-import git from "../../images/git.png";
+import html from "../../images/html.jfif";
+import css from "../../images/css.jfif";
+import js from "../../images/js.png";
+import react from "../../images/react.jpeg";
 import explore1 from "../../images/exploremain2.svg";
 import { Divider } from "@material-ui/core";
 import Search from "./SearchFeature";
@@ -36,20 +38,20 @@ const ExploreFeed = () => {
         <Grid container spacing={3} direction="row" justifyContent="center">
           <Grid item  className="card">
             <Card sx={{ maxWidth: 300}} style={{ borderRadius: 10}} elevation={3} className="card">
-              <Link to="/webd" style={{ textDecoration: "none" }}>
+              <Link to="/html" style={{ textDecoration: "none" }}>
                 
                   <CardMedia
                     component="img"
-                    height="140"
-                    image={webd}
-                    alt="green iguana"
+                    height="150"
+                    image={html}
+                    alt="HTML"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Web development
+                      HTML
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Complete web development basics Html CSS and Javascript
+                      Learn complete HTML. elements div, span, and many more concepts.
                     </Typography>
                   </CardContent>
                 
@@ -59,20 +61,20 @@ const ExploreFeed = () => {
 
           <Grid item className="card">
             <Card sx={{ maxWidth: 300 }} style={{ borderRadius: 10}} elevation={3} className="card">
-              <Link to="/github" style={{ textDecoration: "none" }}>
+              <Link to="/css" style={{ textDecoration: "none" }}>
                 
                   <CardMedia
                     component="img"
                     height="140"
-                    image={git}
-                    alt="green iguana"
+                    image={css}
+                    alt="css"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      git and github
+                      css
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Complete git and github with commands and practical
+                      Complete css with in depth concepts and practical
                     </Typography>
                   </CardContent>
                 
@@ -82,20 +84,20 @@ const ExploreFeed = () => {
 
           <Grid item className="card">
             <Card sx={{ maxWidth: 300 }} style={{ borderRadius: 10}} elevation={3} className="card">
-              <Link to="/github" style={{ textDecoration: "none" }}>
+              <Link to="/javascript" style={{ textDecoration: "none" }}>
                 
                   <CardMedia
                     component="img"
                     height="140"
-                    image={git}
+                    image={js}
                     alt="green iguana"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      git and github
+                      Javascript
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Complete git and github with commands and practical
+                      Learn javascript with real life example by hitesh.
                     </Typography>
                   </CardContent>
                 
@@ -105,20 +107,20 @@ const ExploreFeed = () => {
 
           <Grid item className="card">
             <Card sx={{ maxWidth: 300 }} style={{ borderRadius: 10}} elevation={3} className="card">
-              <Link to="/github" style={{ textDecoration: "none" }}>
+              <Link to="/react" style={{ textDecoration: "none" }}>
                 
                   <CardMedia
                     component="img"
                     height="140"
-                    image={git}
-                    alt="green iguana"
+                    image={react}
+                    alt="React"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      git and github
+                      React JS
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Complete git and github with commands and practical
+                      React js with each concept as a separate module
                     </Typography>
                   </CardContent>
                 
