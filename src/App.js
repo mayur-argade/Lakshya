@@ -15,6 +15,14 @@ import "./App.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
+import { createTheme, ThemeProvider } from "@material-ui/core";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Error from './pages/Error/Error'
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_WUrPgGWZA-DqMHP_k2m95Q8sOGhPQVc",
@@ -70,8 +78,13 @@ function App(){
           <Profile />
         </Route>
 
+        <Route path="/error">
+          <Error />
+        </Route>
+        
         <Route path="/:coursename" component={Course}/> 
 
+        
       </Switch>
     </Router>
     </ThemeProvider>

@@ -4,6 +4,7 @@ import avatar from '../../images/mayur.png';
 import { Link } from "react-router-dom"
 import logo from '../../images/logo.png'
 import { Message, Notifications, Settings } from '@material-ui/icons';
+import Search from './SearchFeature'
 
 const Appbar = () => {
     // const [auth, setAuth] = React.useState(true);
@@ -23,13 +24,11 @@ const Appbar = () => {
 
     return (
         <>
-        <AppBar elevation={1} position="fixed"   style={{ height:60,  background: '#FFFFFF'}} >
+        <AppBar elevation={0} position="fixed" color='transparent'  style={{ height:60}} >
             <Toolbar >
             <img className="logo"  src={logo} alt="logo" style={{ height:50, width:"50" }} />
             <Typography variant="h6" color="#000000" sx={{ flexGrow: 1 }}>Lakshya</Typography>
             
-            <div className="Searchfield" >
-            <input type="text" placeholder="Search" style={{ borderRadius: 5, border: "#0000"}} />
             
             <IconButton aria-label="Notifications" Style={{padding: 5}}>
                <Notifications icon={Notifications} />
@@ -42,8 +41,6 @@ const Appbar = () => {
             <IconButton aria-label="Notifications" Style={{padding: 5}}>
                <Settings icon={Settings}  />
             </IconButton>
-
-            </div>
             
 
 

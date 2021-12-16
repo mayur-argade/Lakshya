@@ -8,17 +8,17 @@ const Explore = () => {
     return (
         <>
     <Grid direction="column" container justifyContent="center" >
-    <Grid item>
+    {/* <Grid item>
         <Appbar /> 
-    </Grid>
+    </Grid> */}
 
-    <Grid container direction="row" justifyContent="center"  style={{marginTop: 60}}>
+    <Grid container direction="row" justifyContent="center" >
     
         <Grid item xs={2}>
             <Sidebar/>
         </Grid>
     
-        <Grid item xs={10}>
+        <Grid item xs={10} style={{backgroundColor: "#f0ecfc",borderTopLeftRadius:20}}>
             <ExploreFeed/>
         </Grid>
     
