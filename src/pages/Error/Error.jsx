@@ -6,7 +6,7 @@ import error from '../../images/404error.gif'
 const Error = () => {
     return (
     <>
-    <Grid container direction="column" justifyContent="center" alignItems="center">
+    <Grid container direction="column" justifyContent="center" alignItems="center" style={{backgroundColor:"#FFFFFF"}}>
 
         <Grid item className="errorTitle">
         OOPS!

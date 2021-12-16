@@ -3,20 +3,16 @@
     padding: 0%;
 }
 /* --------------appbar------------------ */
-.linksgroup{
-display: flex;
-}
+
 .link{
     padding-right: 5rem;
 }
 /* ----------------feed----------------- */
 .feedcontainer{
-    margin-top: 80px;
     margin-right: 60px;
     display: flex;
     justify-content: center;
-    
-    
+ 
 }
 .vidtitle{
     font-size: 30px;
