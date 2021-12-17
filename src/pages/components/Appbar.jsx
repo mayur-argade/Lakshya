@@ -78,7 +78,7 @@ const Appbar = () => {
                 }}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}>
-                <Link to="/profile">
+                <Link to="/error">
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 </Link>
                 <MenuItem onClick={handleClose}>My account</MenuItem>

@@ -14,7 +14,6 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import "./App.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-
 import Error from './pages/Error/Error'
 
 
@@ -65,7 +64,7 @@ function App(){
         </Route>
 
         <Route path="/explore">
-          <Explore />
+        <Explore />  
         </Route>
 
         <Route path="/profile">

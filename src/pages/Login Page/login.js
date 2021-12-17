@@ -90,9 +90,9 @@ function signIn(auth,email,password){
 
     <Grid container direction="column" justifyContent="center" alignItems="center"> 
 
-    <Typography align='center' variant='h2' style={{color:'#A405DC',fontWeight:'600',marginTop:100}}>Lakshya</Typography>
-            <Typography variant='h4' fontWeight='400' align='center'>Welcome :)</Typography>
-            <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Login In</Typography>
+    <Typography align='center' variant='h3' style={{color:'#A405DC',fontWeight:'600',marginTop:10}}>Lakshya</Typography>
+            <Typography variant='h5' fontWeight='400' align='center'>Welcome :)</Typography>
+            <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Login </Typography>
 
     <Grid container justifyContent="center" alignItems="center">
 
@@ -138,7 +138,7 @@ function signIn(auth,email,password){
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Link to='/explore'>
+          <Link to='/explore' style={{ textDecoration: "none"}}>
             <Button
               type="submit"
               fullWidth
@@ -153,12 +153,12 @@ function signIn(auth,email,password){
             </Link>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link href="#" variant="body2" style={{ textDecoration: "none"}}>
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link to='/register'>
+              <Link to='/register' style={{ textDecoration: "none"}}>
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

@@ -87,8 +87,8 @@ export default function SignUp() {
 
     <Grid container direction="column" justifyContent="center" alignItems="center"> 
 
-    <Typography align='center' variant='h2' style={{color:'#A405DC',fontWeight:'600',marginTop:100}}>Lakshya</Typography>
-            <Typography variant='h4' fontWeight='400' align='center'>Hello :</Typography>
+    <Typography align='center' variant='h3' style={{color:'#A405DC',fontWeight:'600',marginTop:10}}>Lakshya</Typography>
+            <Typography variant='h5' fontWeight='400' align='center'>Hello :</Typography>
             <Typography variant='h6' fontWeight='400' align='center'>To save Your Progress Please Sign Up</Typography> 
 
     <Grid container justifyContent="center" alignItems="center">
@@ -135,7 +135,7 @@ export default function SignUp() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-         <Link to='/personalinfo'>
+         <Link to='/personalinfo' style={{ textDecoration: "none"}}>
           <Button
             type="submit"
             fullWidth
@@ -150,12 +150,12 @@ export default function SignUp() {
           </Link>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2" to='/error'>
+              <Link href="#" variant="body2" to='/error' style={{ textDecoration: "none"}}>
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link to='/Login'>
+              <Link to='/Login' style={{ textDecoration: "none"}}>
                 {"Already have an account? Sign In"}
               </Link>
             </Grid>
